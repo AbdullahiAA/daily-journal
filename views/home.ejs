@@ -1,17 +1,17 @@
 <%- include("partials/header") -%>
 
-<h1>Home</h1>
+    <h1>Home</h1>
 
-<p><%= startingContent %></p>
+    <p><%= startingContent %></p>
 
-<% newPosts.forEach(function(newPost) { %>
-    <h2><%= newPost.title %></h2>
-    <p>
-        <!-- Showing the first 100 charaters of the post (Truncating)... -->
-        <%= newPost.content.substring(0, 100) + "..." %>
+    <% newPosts.forEach(function(newPost) { %>
+        <h2><%= newPost.title %></h2>
+        <p>
+            <!-- Showing the first 100 charaters of the post (Truncating)... -->
+            <%= newPost.content.substring(0, 100) + "..." %>
 
-        <a href="/posts/<%= newPost.title %>">Read more</a>
-    </p>
-<% }) %>
+            <a href="/posts/<%= newPost.title %>">Read more</a>
+        </p>
+    <% }) %>
 
 <%- include("partials/footer") -%>
