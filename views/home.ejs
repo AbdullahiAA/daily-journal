@@ -6,8 +6,12 @@
 
 <% newPosts.forEach(function(newPost) { %>
     <h2><%= newPost.title %></h2>
-    <p><%= newPost.content %></p>
-    <% newPost.getPreface() %>
+    <p>
+        <!-- Showing the first 100 charaters of the post (Truncating)... -->
+        <%= newPost.content.substring(0, 100) + "..." %>
+
+        <a href="/posts/<%= newPost.title %>">Read more</a>
+    </p>
 <% }) %>
 
 <%- include("partials/footer") -%>
